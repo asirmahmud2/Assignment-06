@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Alex Johnson",
+    "picture": "https://randomuser.me/api/portraits/men/32.jpg",
+    "email": "alex.johnson@gmail.com",
+    "days_since_contact": 18,
+    "status": "overdue",
+    "tags": ["college", "close friend"],
+    "bio": "Met during university years. We used to study together and still catch up over long calls.",
+    "goal": 14,
+    "next_due_date": "2025-07-10"
+  },
+  {
+    "id": 2,
+    "name": "Sophie Williams",
+    "picture": "https://randomuser.me/api/portraits/women/44.jpg",
+    "email": "sophie.williams@gmail.com",
+    "days_since_contact": 10,
+    "status": "almost due",
+    "tags": ["work", "team"],
+    "bio": "Colleague from my previous internship. We collaborate on side projects occasionally.",
+    "goal": 14,
+    "next_due_date": "2025-07-18"
+  },
+  {
+    "id": 3,
+    "name": "Daniel Brown",
+    "picture": "https://randomuser.me/api/portraits/men/65.jpg",
+    "email": "daniel.brown@gmail.com",
+    "days_since_contact": 5,
+    "status": "on-track",
+    "tags": ["gym", "buddy"],
+    "bio": "Gym partner and accountability buddy. We train together every weekend.",
+    "goal": 10,
+    "next_due_date": "2025-07-22"
+  },
+  {
+    "id": 4,
+    "name": "Emily Davis",
+    "picture": "https://randomuser.me/api/portraits/women/68.jpg",
+    "email": "emily.davis@gmail.com",
+    "days_since_contact": 20,
+    "status": "overdue",
+    "tags": ["school", "best friend"],
+    "bio": "Best friend from school. We share everything and try to meet whenever possible.",
+    "goal": 15,
+    "next_due_date": "2025-07-08"
+  },
+  {
+    "id": 5,
+    "name": "Michael Lee",
+    "picture": "https://randomuser.me/api/portraits/men/12.jpg",
+    "email": "michael.lee@gmail.com",
+    "days_since_contact": 12,
+    "status": "almost due",
+    "tags": ["neighbor"],
+    "bio": "Neighbor and chess partner. We play every Friday evening.",
+    "goal": 14,
+    "next_due_date": "2025-07-16"
+  },
+  {
+    "id": 6,
+    "name": "Olivia Martinez",
+    "picture": "https://randomuser.me/api/portraits/women/21.jpg",
+    "email": "olivia.martinez@gmail.com",
+    "days_since_contact": 3,
+    "status": "on-track",
+    "tags": ["cousin", "family"],
+    "bio": "My cousin. We stay connected through video calls and family gatherings.",
+    "goal": 7,
+    "next_due_date": "2025-07-20"
+  },
+  {
+    "id": 7,
+    "name": "James Anderson",
+    "picture": "https://randomuser.me/api/portraits/men/75.jpg",
+    "email": "james.anderson@gmail.com",
+    "days_since_contact": 16,
+    "status": "overdue",
+    "tags": ["football", "friend"],
+    "bio": "Teammate from local football club. We hang out after matches.",
+    "goal": 12,
+    "next_due_date": "2025-07-12"
+  },
+  {
+    "id": 8,
+    "name": "Isabella Clark",
+    "picture": "https://randomuser.me/api/portraits/women/50.jpg",
+    "email": "isabella.clark@gmail.com",
+    "days_since_contact": 8,
+    "status": "on-track",
+    "tags": ["design", "friend"],
+    "bio": "Designer friend I met at a workshop. We share creative ideas often.",
+    "goal": 10,
+    "next_due_date": "2025-07-19"
+  }
+]

@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useParams } from "react-router-dom";
-import { FaClock, FaArchive, FaTrash } from "react-icons/fa";
-import { FaPhone, FaComment } from "react-icons/fa";
+import { FaClock, FaArchive, FaTrash, FaPhone, FaComment } from "react-icons/fa";
 import { CiVideoOn } from "react-icons/ci";
+import { TimelineContext } from "../Context/TimelineContext";
+import { toast } from "react-toastify";
+
 const FriendDetails = () => {
     const { id } = useParams();
     const [friend, setFriend] = useState(null);
+    const { addEvent } = useContext(TimelineContext);
 
     const loadData = async () => {
         const res = await fetch("/Data.json");
@@ -13,9 +16,20 @@ const FriendDetails = () => {
         const found = data.find(f => f.id === parseInt(id));
         setFriend(found);
     };
-    // eslint-disable-next-line react-hooks/set-state-in-render
     loadData();
 
+    const handleCall = () => {
+        addEvent("Call", friend.name);
+        toast.success(`Call with ${friend.name} added`);
+    };
+    const handleText = () => {
+        addEvent("Text", friend.name);
+        toast.success(`Text with ${friend.name} added`);
+    };
+    const handleVideo = () => {
+        addEvent("Video", friend.name);
+        toast.success(`Video with ${friend.name} added`);
+    };
     if (!friend) return <div className="text-center py-20">Loading...</div>;
 
     let statusColor = "";
@@ -66,6 +80,8 @@ const FriendDetails = () => {
                         <h2 className="text-3xl font-bold">{friend.goal}</h2>
                         <p className="text-gray-500">Goal (Days)</p>
                     </div>
+
+
                     <div className="bg-base-100 shadow rounded-xl p-6 text-center">
                         <h2 className="text-xl font-bold">{friend.next_due_date}</h2>
                         <p className="text-gray-500">Next Due</p>
@@ -81,22 +97,30 @@ const FriendDetails = () => {
                         </p>
                     </div>
                     <button className="btn btn-sm">Edit</button>
+
+
+
                 </div>
 
                 <div className="bg-base-100 shadow rounded-xl p-6">
                     <h3 className="text-lg font-semibold mb-4">Quick Check-In</h3>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <button className="btn h-18 flex flex-col items-center justify-center gap-2">
+                        <button onClick={handleCall} className="btn h-18 flex flex-col items-center justify-center gap-2">
                             <FaPhone className="text-xl" />
                             Call
                         </button>
-                        <button className="btn h-18 flex flex-col items-center justify-center gap-2">
+                        <button onClick={handleText} className="btn h-18 flex flex-col items-center justify-center gap-2">
                             <FaComment className="text-xl" />
                             Text
                         </button>
-                        <button className="btn h-18 flex flex-col items-center justify-center gap-2">
-                            <CiVideoOn className="text-xl" /> Video
+
+
+                        <button onClick={handleVideo} className="btn h-18 flex flex-col items-center justify-center gap-2">
+                            <CiVideoOn className="text-xl" />
+                            Video
                         </button>
+
+
 
                     </div>
                 </div>
